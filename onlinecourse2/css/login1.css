@@ -1,0 +1,133 @@
+/* ตั้งค่าสไตล์พื้นฐาน */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Sarabun";
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+/* จัดการโครงสร้างหลัก */
+.container {
+    display: flex;
+    height: 90%;
+    width: 80%;
+    max-width: 1000px;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.image-background {
+    width: 60%;
+    background: url('https://img.pikbest.com/wp/202405/cyber-security-technology-3d-rendering-of-background-with-glossy-black-locks-symbolizing-and-data-protection_9793091.jpg!w700wp') no-repeat center center/cover;
+    background-blend-mode: overlay;
+    background-color: rgb(116, 124, 196);
+}
+
+.login-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+
+.signup-form {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.signup-form h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* สไตล์ช่องกรอกข้อมูล */
+.signup-form label {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    font-size: 16px;
+    color: #333;
+}
+
+.signup-form input[type="text"]:focus,
+.signup-form input[type="email"]:focus,
+.signup-form input[type="password"]:focus {
+    outline: none;
+    border-bottom: 1px solid #e91e63;
+}
+
+/* สไตล์สำหรับ Checkbox */
+.checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.checkbox input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.checkbox a {
+    color: #e91e63;
+    text-decoration: none;
+}
+
+/* สไตล์ปุ่ม */
+.btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #e91e63, #ff4081);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: linear-gradient(90deg, #d81b60, #f50057);
+}
+
+.signin {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.signin a {
+    color: #e91e63;
+    text-decoration: none;
+}
+
+

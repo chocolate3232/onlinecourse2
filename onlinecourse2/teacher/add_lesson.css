@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-custom {
+    background-color: #007bff; /* สีน้ำเงิน */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-custom:hover {
+    background-color: #0056b3; /* สีเข้มขึ้นเมื่อ hover */
+}
+
+.btn-back {
+    background-color: #6c757d; /* สีเทาสำหรับปุ่มกลับ */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-back:hover {
+    background-color: #5a6268; /* สีเทาที่เข้มขึ้นเมื่อ hover */
+}
+
+.upload-section,
+.link-section {
+    display: none;
+}
+
+.alert-info {
+    margin-top: 20px;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+}
+/* การตกแต่งการแจ้งเตือน */
+.alert-info {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #e0f7fa; /* สีฟ้าพาสเทล */
+    border-left: 5px solid #007bff; /* แถบด้านซ้ายเป็นสีฟ้าสด */
+    color: #007bff; /* ตัวหนังสือสีฟ้า */
+    border-radius: 8px; /* ขอบมน */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* เงาเบา */
+    transition: transform 0.2s ease, opacity 0.2s ease; /* เพิ่มเอฟเฟกต์ */
+}
+
+.alert-info:hover {
+    transform: translateY(-5px); /* ทำให้การแจ้งเตือนลอยขึ้นเล็กน้อยเมื่อ hover */
+    opacity: 0.9; /* ลดความทึบ */
+}
+
+/* ปรับแต่งข้อความให้ดูดีขึ้น */
+.alert-info p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* เพิ่มการแสดงผลสไตล์ปุ่ม */
+.alert-info .btn {
+    background-color: #007bff; /* ปุ่มที่ใช้ร่วมกับการแจ้งเตือน */
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.alert-info .btn:hover {
+    background-color: #0056b3; /* สีปุ่มเข้มขึ้นเมื่อ hover */
+}
+

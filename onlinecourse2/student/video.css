@@ -1,0 +1,311 @@
+/* video_page.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff5f7;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 90px auto; /* ให้ container มีระยะห่างจาก navbar */
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ec407a; /* สีพื้นหลัง */
+  padding: 15px 30px; /* เพิ่มระยะห่างจากขอบ */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* เงา */
+  z-index: 1000;
+  margin: 0;
+}
+
+.navbar .navbar-brand {
+  font-size: 24px; /* ขนาดตัวอักษรเพิ่ม */
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase; /* ทำให้ข้อความเป็นตัวพิมพ์ใหญ่ทั้งหมด */
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  margin: 0 15px; /* ระยะห่างระหว่างลิงค์ */
+  font-size: 16px;
+}
+
+.navbar a:hover {
+  color: #ff66b2; /* สีเมื่อ hover */
+}
+
+.navbar .user-info {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  margin-right: 50px;
+}
+
+.navbar .btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+  padding: 10px;
+}
+
+.navbar .btn:hover {
+  color: #ff66b2;
+}
+
+/* Right side of the navbar (user-info and buttons) */
+.navbar .right {
+  display: flex;
+  align-items: center;
+}
+
+/* ทำให้มี spacing ระหว่างปุ่ม */
+.navbar .right a {
+  margin-left: 20px;
+}
+
+
+.progress-bar {
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 20px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.progress-bar-fill {
+  background-color: #d81b60;
+  width: 0%; /* กำหนดเริ่มต้นเป็น 0% */
+  height: 100%;
+  transition: width 0.2s ease-in-out;
+}
+
+
+/* ปรับการแสดงผลของ video */
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+iframe, video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+/* ปรับการจัดการปุ่มควบคุม */
+.controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.controls button {
+  background-color: #d81b60;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0 5px;
+}
+
+.controls button:hover {
+  background-color: #ad1457;
+}
+
+.controls button.disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+/* ปรับการแสดงข้อมูลวิชา */
+.subject-info {
+  margin: 20px 0;
+  padding: 10px;
+  background: #fce4ec;
+  border-left: 6px solid #d81b60;
+}
+
+#progressText {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* ปรับปรุงการแสดงผลของการควบคุมเสียง */
+.volume-control {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.volume-bar {
+  position: relative;
+  height: 10px;
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  margin: 0 10px;
+}
+
+.volume-fill {
+  height: 100%;
+  background-color: #d81b60;
+  border-radius: 5px;
+  transition: width 0.2s ease;
+}
+
+/* ปรับปรุงการแสดงผลปุ่มทดสอบก่อนเรียน */
+#preTestBtn {
+  background-color: #d81b60;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#preTestBtn:hover {
+  background-color: #ad1457;
+}
+
+#preTestBtn.disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+#preTestBtn:focus {
+  outline: none;
+}
+
+
+/* การป้องกันการแสดงผลในโหมดแนวตั้ง */
+@media (orientation: portrait) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+  }
+
+  .container {
+    display: none;
+  }
+
+  .landscape-warning {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    color: #d81b60;
+    text-align: center;
+  }
+
+  .landscape-warning p {
+    margin: 0px;
+  }
+}
+
+/* เมื่ออยู่ในโหมดแนวนอน */
+@media (orientation: landscape) {
+  .landscape-warning {
+    display: none;
+  }
+
+  .container {
+    display: block;
+  }
+}
+#loadingSpinner {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  animation: fadeIn 0.5s ease-out;
+}
+
+
+
+#loadingMessage {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.spinner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#loadingSpinner .spinner-border {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+  border-color: #d81b60; 
+  border-top-color: transparent; 
+}
+
+
+#loadingSpinner p {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  padding-top: 10px;
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
